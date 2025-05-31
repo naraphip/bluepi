@@ -1,0 +1,177 @@
+.env
+node_modules/
+vendor/
+*.log
+.DS_Store
+
+
+client/node_modules/
+client/.next/
+
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+client/.pnp
+client/.pnp.*
+client/.yarn/*
+!client/.yarn/patches
+!client/.yarn/plugins
+!client/.yarn/releases
+!client/.yarn/versions
+
+# testing
+client/coverage
+
+# next.js
+client/out/
+
+# production
+client/build
+
+# misc
+client/.DS_Store
+client/*.pem
+
+# debug
+client/npm-debug.log*
+client/yarn-debug.log*
+client/yarn-error.log*
+client/.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+client/.env*
+
+# vercel
+client/.vercel
+
+# typescript
+client/*.tsbuildinfo
+client/next-env.d.ts
+
+
+#-------------------------
+# Operating Specific Junk Files
+#-------------------------
+
+# OS X
+backend/.DS_Store
+backend/.AppleDouble
+backend/.LSOverride
+
+# OS X Thumbnails
+backend/._*
+
+# Windows image file caches
+backend/Thumbs.db
+backend/ehthumbs.db
+backend/Desktop.ini
+
+# Recycle Bin used on file shares
+backend/$RECYCLE.BIN/
+
+# Windows Installer files
+backend/*.cab
+backend/*.msi
+backend/*.msm
+backend/*.msp
+
+# Windows shortcuts
+backend/*.lnk
+
+# Linux
+*~
+
+# KDE directory preferences
+backend/.backend.directory
+
+# Linux trash folder which might appear on any partition or disk
+backend/.backend.Trash-*
+
+#-------------------------
+# Environment Files
+#-------------------------
+# These should never be under version control,
+# as it poses a security risk.
+backend/.backend.env
+backend/.vagrant
+backend/Vagrantfile
+
+#-------------------------
+# Temporary Files
+#-------------------------
+backend/writable/cache/*
+!backend/writable/cache/index.html
+
+backend/writable/logs/*
+!backend/writable/logs/index.html
+
+backend/writable/session/*
+!backend/writable/session/index.html
+
+backend/writable/uploads/*
+!backend/writable/uploads/index.html
+
+backend/writable/debugbar/*
+!backend/writable/debugbar/.gitkeep
+
+backend/php_errors.log
+
+#-------------------------
+# User Guide Temp Files
+#-------------------------
+backend/user_guide_src/build/*
+backend/user_guide_src/cilexer/build/*
+backend/user_guide_src/cilexer/dist/*
+backend/user_guide_src/cilexer/pycilexer.egg-info/*
+
+#-------------------------
+# Test Files
+#-------------------------
+backend/tests/coverage*
+
+# Don't save phpunit under version control.
+backend/phpunit
+
+#-------------------------
+# Composer
+#-------------------------
+backend/vendor/
+
+#-------------------------
+# IDE / Development Files
+#-------------------------
+
+# Modules Testing
+backend/_modules/*
+
+# phpenv local config
+backend/.php-version
+
+# Jetbrains editors (PHPStorm, etc)
+backend/.idea/
+backend/*.iml
+
+# NetBeans
+backend/nbproject/
+backend/build/
+backend/nbbuild/
+backend/dist/
+backend/nbdist/
+backend/nbactions.xml
+backend/nb-configuration.xml
+backend/.nb-gradle/
+
+# Sublime Text
+backend/*.tmlanguage.cache
+backend/*.tmPreferences.cache
+backend/*.stTheme.cache
+backend/*.sublime-workspace
+backend/*.sublime-project
+backend/.phpintel
+backend/api/
+
+# Visual Studio Code
+backend/.vscode/
+
+backend/results/
+backend/phpunit*.xml

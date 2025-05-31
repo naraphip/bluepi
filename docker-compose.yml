@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  frontend:
+    build: ./client
+    ports:
+      - "3000:3000"
+    environment:
+      NEXT_PUBLIC_API_URL: http://backend/api
+      API_KEY: naraphipdev_request_key
+    depends_on:
+      - backend
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: ../docker/php/Dockerfile
+    ports:
+      - "8080:80"
+    volumes:
+      - ./backend:/var/www/html
+      - ./docker/apache/000-default.conf:/etc/apache2/sites-available/000-default.conf
+    depends_on:
+      - db
+
+  db:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_DATABASE: bluepi_db
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: bluepi_user
+      MYSQL_PASSWORD: bluepi_dev
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./backend/app/Models/Schema:/docker-entrypoint-initdb.d
+    ports:
+      - "3306:3306"
+
+volumes:
+  db_data:
