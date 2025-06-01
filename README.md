@@ -29,7 +29,6 @@
 ```
 bluepishop/
 ├── README.md
-├── .env                    # Environment variables
 ├── docker-compose.yml      # Docker configuration
 ├── backend/               # CodeIgniter 4 Backend
 │   └── app/
