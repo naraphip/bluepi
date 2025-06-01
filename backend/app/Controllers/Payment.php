@@ -116,8 +116,7 @@ class Payment extends BaseController
                             'status' => true,
                             'message' => 'Payment successful, no change needed',
                             'sumGivenChange' => 0,
-                            'givenChange' => [],
-                            'cashUpdated' => $availableCash,
+                            'givenChange' => []
                         ]);
                     } else {
                         $changeToGive = $this->cashLib::getChange($changeNeeded, $availableCash); // คำนวณเงินทอนที่ต้องคืน
@@ -146,8 +145,7 @@ class Payment extends BaseController
                             'status' => true,
                             'message' => 'Payment successful',
                             'sumGivenChange' => $sumGivenChange,
-                            'givenChange' => $changeToGive,
-                            'cashUpdated' => $cashUpdated,
+                            'givenChange' => $changeToGive
                         ]);
                     }
                     break;

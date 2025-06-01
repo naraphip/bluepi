@@ -26,7 +26,7 @@ class Database extends Config
      */
     public array $default = [
         'DSN'          => '',
-        'hostname'     => 'db',              // ✅ เปลี่ยนจาก localhost เป็นชื่อ service
+        'hostname'     => 'db',              // ✅ เปลี่ยนจาก localhost เป็นชื่อ service (docker)
         'username'     => 'bluepi_user',
         'password'     => 'bluepi_dev',
         'database'     => 'bluepi_db',
