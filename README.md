@@ -74,7 +74,7 @@ cd bluepishop
 
 2. ตั้งค่า environment variables:
 ```bash
-cp .env.example .env
+cp .env.development .env
 # แก้ไขค่าต่างๆ ใน .env ตามต้องการ
 ```
 
@@ -91,7 +91,7 @@ docker-compose logs
 
 5. เข้าใช้งานแอปพลิเคชัน:
 - Frontend: http://localhost:3000
-- Backend API: http://localhost:8080/api
+- Backend API: http://localhost:8080/api (แนะนำ postman)
 - Database: localhost:3306 (MySQL)
 
 ### การรันแบบ Development
@@ -173,15 +173,6 @@ Database จะถูก initialize อัตโนมัติผ่าน `doc
 ### Tables Structure
 
 1. **products** - ข้อมูลสินค้า
-   - `id` (Primary Key)
-   - `name` - ชื่อสินค้า
-   - `sku` - รหัสสินค้า (Unique)
-   - `image_url` - URL รูปภาพ
-   - `description` - รายละเอียด
-   - `price` - ราคา
-   - `stock` - จำนวนคงเหลือ
-   - `status` - สถานะ (1=เปิด, 0=ปิด)
-
 2. **transactions** - รายการธุรกรรม
 3. **payment_status** - สถานะการชำระเงิน  
 4. **cash** - ข้อมูลเงินสด
@@ -272,32 +263,15 @@ npm test
 สร้างไฟล์ `.env` และตั้งค่าตัวแปรต่อไปนี้:
 
 ```env
-# Database (MySQL) สำหรับ CodeIgniter 4
-database.default.hostname = localhost
-database.default.database = bluepi_db
-database.default.username = bluepi_user
-database.default.password = bluepi_dev
-database.default.DBDriver = MySQLi
-database.default.DBPrefix = 
-database.default.port = 3306
 
 # CodeIgniter Environment
 CI_ENVIRONMENT = development
 
-# Base URL
-app.baseURL = 'http://localhost:8080'
-
-# Frontend Environment Variables
-NEXT_PUBLIC_API_URL=http://localhost:8080/api
 ```
 
 ## API Documentation
 
-[ลิงก์ไปยัง API documentation หรือ endpoint list]
-
-## การ Deploy
-
-สำหรับการ deploy ให้ดูรายละเอียดจากทีมพัฒนาหรือ DevOps
+[[ลิงก์ไปยัง API documentation หรือ endpoint list]]
 
 ## การแก้ไขปัญหา
 
