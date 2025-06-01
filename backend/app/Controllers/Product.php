@@ -16,7 +16,8 @@ class Product extends BaseController
     public function index()
     {
         try {
-            $products = $this->productModel->where('status', 1)
+            $products = $this->productModel->select('id, name, sku, image_url, description, price, stock')
+                ->where('status', 1)
                 ->orderBy('created_at', 'DESC')
                 ->orderBy('stock', 'DESC')
                 ->findAll();

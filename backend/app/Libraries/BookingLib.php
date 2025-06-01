@@ -258,6 +258,12 @@ class BookingLib
 
 
     // get transaction by booking number
+    /**
+     * Get transaction details by booking number.
+     *
+     * @param string $booking_no The booking number to retrieve the transaction for.
+     * @return array Response containing the transaction details or an error message.
+     */
     public function getTransactionByBookingNo(string $booking_no): array
     {
         try {
