@@ -271,7 +271,7 @@ CI_ENVIRONMENT = development
 
 ## API Documentation
 
-[[ลิงก์ไปยัง API documentation หรือ endpoint list]]
+[[[ลิงก์ไปยัง API documentation หรือ endpoint list]]](https://www.postman.com/narathip00237/bluepi-challenge)
 
 ## การแก้ไขปัญหา
 
